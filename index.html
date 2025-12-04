@@ -1,41 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MiniDex Edi - Arc Testnet</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniDex – Arc Testnet</title>
 
-<style>
-body { background:#111; color:#fff; font-family:Arial; text-align:center; padding:20px; }
-h1 { color:#4CAF50; }
-table { width:90%; margin:auto; border-collapse:collapse; background:#222; }
-th,td { border:1px solid #555; padding:10px; }
-th { background:#333; }
-button {
-  background:#4CAF50; border:none; padding:12px 18px;
-  color:#fff; font-size:16px; border-radius:8px; margin-top:20px;
-}
-button:hover { background:#45a049; }
-</style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 5px;
+        }
+
+        .sub {
+            color: #ccc;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 92%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: #222;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #444;
+            padding: 12px;
+        }
+
+        th {
+            background: #333;
+        }
+
+        .btn {
+            background: #4CAF50;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 25px;
+        }
+
+        .btn:hover {
+            background: #45a049;
+        }
+    </style>
 </head>
 
 <body>
 
-<h1>MiniDex — Arc Testnet</h1>
-<p>Projeto simples criado por Edi para o cargo Creator.</p>
+    <h1>MiniDex — Arc Testnet</h1>
+    <p class="sub">Uma mini interface DEX para testes.</p>
 
-<table>
-<tr><th>Token</th><th>Símbolo</th><th>Preço (fake)</th></tr>
-<tr><td>Arc Token</td><td>ARC</td><td>$0.12</td></tr>
-<tr><td>Mini Dex Coin</td><td>MDX</td><td>$0.003</td></tr>
-<tr><td>Gas Token</td><td>TARC</td><td>$0.01</td></tr>
-</table>
+    <table>
+        <tr>
+            <th>Token</th>
+            <th>Símbolo</th>
+            <th>Preço (fake)</th>
+        </tr>
+        <tr>
+            <td>Arc Token</td>
+            <td>ARC</td>
+            <td>$0.12</td>
+        </tr>
+        <tr>
+            <td>Mini Dex Coin</td>
+            <td>MDX</td>
+            <td>$0.003</td>
+        </tr>
+        <tr>
+            <td>Gas Token</td>
+            <td>TARC</td>
+            <td>$0.01</td>
+        </tr>
+    </table>
 
-<button onclick="alert('Função disponível somente na Testnet da Arc!')">
-Conectar Carteira
-</button>
+    <button class="btn" onclick="connect()">Conectar Carteira</button>
+
+    <script>
+        function connect() {
+            alert("Função de conexão ainda não implementada na Testnet 👀");
+        }
+    </script>
 
 </body>
 </html>
+
 
