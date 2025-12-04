@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,54 +8,77 @@
 
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            background: #111;
+            background: radial-gradient(circle at top, #1a1a1a, #000);
             color: #fff;
             text-align: center;
-            padding: 20px;
+            padding: 40px 15px;
         }
 
         h1 {
-            color: #4CAF50;
-            margin-bottom: 5px;
+            font-size: 32px;
+            background: linear-gradient(90deg, #4CAF50, #78ffb3);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 15px #4caf5070;
+            margin-bottom: 10px;
         }
 
         .sub {
             color: #ccc;
-            margin-bottom: 25px;
+            margin-bottom: 35px;
+        }
+
+        .card {
+            width: 92%;
+            max-width: 420px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            margin: auto;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
         }
 
         table {
-            width: 92%;
-            margin: 20px auto;
+            width: 100%;
             border-collapse: collapse;
-            background: #222;
             border-radius: 10px;
             overflow: hidden;
+            margin-bottom: 20px;
         }
 
         th, td {
-            border: 1px solid #444;
+            border-bottom: 1px solid #444;
             padding: 12px;
         }
 
         th {
-            background: #333;
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
         }
 
         .btn {
-            background: #4CAF50;
+            width: 100%;
+            background: linear-gradient(90deg, #4CAF50, #62ff90);
             border: none;
-            padding: 12px 20px;
-            border-radius: 8px;
-            color: white;
-            font-size: 16px;
+            padding: 14px 20px;
+            border-radius: 10px;
+            color: black;
+            font-size: 17px;
+            font-weight: bold;
             cursor: pointer;
-            margin-top: 25px;
+            transition: 0.2s;
         }
 
         .btn:hover {
-            background: #45a049;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #4CAF50;
         }
     </style>
 </head>
@@ -64,38 +88,38 @@
     <h1>MiniDex — Arc Testnet</h1>
     <p class="sub">Uma mini interface DEX para testes.</p>
 
-    <table>
-        <tr>
-            <th>Token</th>
-            <th>Símbolo</th>
-            <th>Preço (fake)</th>
-        </tr>
-        <tr>
-            <td>Arc Token</td>
-            <td>ARC</td>
-            <td>$0.12</td>
-        </tr>
-        <tr>
-            <td>Mini Dex Coin</td>
-            <td>MDX</td>
-            <td>$0.003</td>
-        </tr>
-        <tr>
-            <td>Gas Token</td>
-            <td>TARC</td>
-            <td>$0.01</td>
-        </tr>
-    </table>
+    <div class="card">
+        <table>
+            <tr>
+                <th>Token</th>
+                <th>Símbolo</th>
+                <th>Preço</th>
+            </tr>
+            <tr>
+                <td>Arc Token</td>
+                <td>ARC</td>
+                <td>$0.12</td>
+            </tr>
+            <tr>
+                <td>Mini Dex Coin</td>
+                <td>MDX</td>
+                <td>$0.003</td>
+            </tr>
+            <tr>
+                <td>Gas Token</td>
+                <td>TARC</td>
+                <td>$0.01</td>
+            </tr>
+        </table>
 
-    <button class="btn" onclick="connect()">Conectar Carteira</button>
+        <button class="btn" onclick="connect()">Conectar Carteira</button>
+    </div>
 
     <script>
         function connect() {
-            alert("Função de conexão ainda não implementada na Testnet 👀");
+            alert("Função de conexão ainda não implementada 🔧");
         }
     </script>
 
 </body>
 </html>
-
-
