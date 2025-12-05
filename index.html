@@ -8,121 +8,137 @@
 
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background: radial-gradient(circle at top, #1a1a1a, #000);
-            color: #fff;
+            background: #0c0c0c;
+            color: #e6e6e6;
             text-align: center;
-            padding: 40px 15px;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 130px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 25px #00ffbb55;
         }
 
         h1 {
-            font-size: 32px;
-            background: linear-gradient(90deg, #4CAF50, #78ffb3);
-            -webkit-background-clip: text;
-            color: transparent;
-            text-shadow: 0 0 15px #4caf5070;
-            margin-bottom: 10px;
+            color: #00ffbb;
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px #00ffbb55;
         }
 
         .sub {
-            color: #ccc;
-            margin-bottom: 35px;
-        }
-
-        .card {
-            width: 92%;
-            max-width: 420px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            margin: auto;
-            padding: 25px;
-            border-radius: 18px;
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+            color: #999;
+            margin-bottom: 25px;
         }
 
         table {
-            width: 100%;
+            width: 92%;
+            margin: 20px auto;
             border-collapse: collapse;
-            border-radius: 10px;
+            background: #161616;
+            border-radius: 14px;
             overflow: hidden;
-            margin-bottom: 20px;
+            box-shadow: 0 0 25px #00ffbb22;
         }
 
         th, td {
-            border-bottom: 1px solid #444;
-            padding: 12px;
+            border: 1px solid #2a2a2a;
+            padding: 14px;
         }
 
         th {
-            background: rgba(255, 255, 255, 0.07);
-        }
-
-        tr:last-child td {
-            border-bottom: none;
+            background: #1f1f1f;
+            color: #00ffbb;
         }
 
         .btn {
-            width: 100%;
-            background: linear-gradient(90deg, #4CAF50, #62ff90);
+            background: #00ffbb;
             border: none;
-            padding: 14px 20px;
-            border-radius: 10px;
-            color: black;
-            font-size: 17px;
-            font-weight: bold;
+            padding: 14px 24px;
+            border-radius: 12px;
+            color: #000;
+            font-size: 16px;
             cursor: pointer;
-            transition: 0.2s;
+            margin-top: 25px;
+            font-weight: bold;
+            box-shadow: 0 0 15px #00ffbb55;
         }
 
         .btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 10px #4CAF50;
+        }
+
+        .swap-area {
+            margin-top: 30px;
+            padding: 20px;
+            background: #161616;
+            border-radius: 14px;
+            width: 92%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 0 25px #00ffbb22;
+        }
+
+        .swap-input {
+            width: 80%;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            margin-top: 10px;
+            background: #1f1f1f;
+            color: #fff;
         }
     </style>
 </head>
 
-<body>  
-    <img src="20251204_210954.jpg" alt="Logo" style="width:140px; border-radius:12px; margin-bottom:20px;">
+<body>
 
-
-    
-
+    <!-- LOGO -->
+    <img src="20251204_210954.jpg" class="logo">
 
     <h1>MiniDex — Arc Testnet</h1>
     <p class="sub">Uma mini interface DEX para testes.</p>
 
-    <div class="card">
-        <table>
-            <tr>
-                <th>Token</th>
-                <th>Símbolo</th>
-                <th>Preço</th>
-            </tr>
-            <tr>
-                <td>Arc Token</td>
-                <td>ARC</td>
-                <td>$0.12</td>
-            </tr>
-            <tr>
-                <td>Mini Dex Coin</td>
-                <td>MDX</td>
-                <td>$0.003</td>
-            </tr>
-            <tr>
-                <td>Gas Token</td>
-                <td>TARC</td>
-                <td>$0.01</td>
-            </tr>
-        </table>
+    <!-- TABELA -->
+    <table>
+        <tr>
+            <th>Token</th>
+            <th>Símbolo</th>
+            <th>Preço</th>
+        </tr>
+        <tr>
+            <td>Arc Token</td>
+            <td>ARC</td>
+            <td>$0.12</td>
+        </tr>
+        <tr>
+            <td>Mini Dex Coin</td>
+            <td>MDX</td>
+            <td>$0.003</td>
+        </tr>
+        <tr>
+            <td>Gas Token</td>
+            <td>TARC</td>
+            <td>$0.01</td>
+        </tr>
+    </table>
 
-        <button class="btn" onclick="connect()">Conectar Carteira</button>
+    <!-- SWAP -->
+    <div class="swap-area">
+        <h3>Swap (demonstrativo)</h3>
+        <input placeholder="Token de origem" class="swap-input">
+        <input placeholder="Token de destino" class="swap-input">
+        <button class="btn">Simular Swap</button>
     </div>
+
+    <!-- WALLET -->
+    <button class="btn" onclick="connect()">Conectar Carteira</button>
 
     <script>
         function connect() {
-            alert("Função de conexão ainda não implementada 🔧");
+            alert("Conexão de carteira real será adicionada futuramente 👀");
         }
     </script>
 
