@@ -1,106 +1,118 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MiniDex – Arc Testnet</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniDex – Arc Testnet</title>
 
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #0d0d0d;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-    }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0a0a0a;
+            color: #eaeaea;
+            text-align: center;
+            padding: 20px;
+        }
 
-    .logo {
-        width: 130px;
-        margin-top: 15px;
-        border-radius: 12px;
-        box-shadow: 0 0 20px #4CAF50;
-    }
+        /* Caixas com brilho suave */
+        .card {
+            background: #141414;
+            border: 1px solid #242424;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px auto;
+            width: 92%;
+            box-shadow: 0px 0px 12px rgba(0,0,0,0.5);
+        }
 
-    h1 {
-        color: #4CAF50;
-        margin-bottom: 5px;
-    }
+        .logo {
+            width: 120px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
 
-    .sub {
-        color: #ccc;
-        margin-bottom: 25px;
-    }
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 5px;
+        }
 
-    table {
-        width: 95%;
-        margin: 20px auto;
-        border-collapse: collapse;
-        background: #1a1a1a;
-        border-radius: 14px;
-        overflow: hidden;
-        box-shadow: 0 0 20px #000;
-    }
+        .sub {
+            color: #bbb;
+            margin-bottom: 25px;
+        }
 
-    th, td {
-        border: 1px solid #333;
-        padding: 14px;
-        font-size: 16px;
-    }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #151515;
+            border-radius: 12px;
+            overflow: hidden;
+        }
 
-    th {
-        background: #222;
-        font-size: 17px;
-    }
+        th, td {
+            border: 1px solid #272727;
+            padding: 12px;
+        }
 
-    .icon {
-        width: 28px;
-        vertical-align: middle;
-        margin-right: 10px;
-        border-radius: 6px;
-    }
+        th {
+            background: #1f1f1f;
+            color: #4CAF50;
+        }
 
-    .btn {
-        background: linear-gradient(90deg, #4CAF50, #2e7d32);
-        border: none;
-        padding: 14px 22px;
-        border-radius: 10px;
-        color: white;
-        font-size: 18px;
-        cursor: pointer;
-        margin-top: 25px;
-        width: 90%;
-        max-width: 300px;
-        box-shadow: 0 0 15px #4CAF50;
-    }
+        td img {
+            width: 26px;
+            height: 26px;
+            vertical-align: middle;
+            margin-right: 6px;
+            border-radius: 100%;
+        }
 
-    .btn:hover {
-        opacity: 0.85;
-    }
+        .btn {
+            background: #4CAF50;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 8px;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: 0.2s;
+        }
 
-    .swapBox {
-        margin-top: 35px;
-        background: #151515;
-        padding: 20px;
-        border-radius: 14px;
-        width: 92%;
-        max-width: 380px;
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow: 0 0 20px #000;
-    }
+        .btn:hover {
+            background: #45a049;
+        }
 
-    .swapInput {
-        width: 90%;
-        padding: 12px;
-        border-radius: 10px;
-        border: none;
-        background: #222;
-        color: #fff;
-        margin-bottom: 12px;
-        font-size: 16px;
-    }
+        /* Caixa Swap */
+        .swap-box {
+            text-align: left;
+        }
 
-</style>
+        .token-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #121212;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: 1px solid #1f1f1f;
+        }
+
+        .swap-input {
+            width: 70%;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        .swap-input:focus {
+            outline: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -112,55 +124,59 @@
     <p class="sub">Uma mini interface DEX para testes.</p>
 
     <!-- TABELA DE TOKENS -->
-    <table>
-        <tr>
-            <th>Token</th>
-            <th>Símbolo</th>
-            <th>Preço</th>
-        </tr>
+    <div class="card">
+        <h2>Mercado</h2>
 
-        <tr>
-            <td><img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" class="icon"> Arc Token</td>
-            <td>ARC</td>
-            <td>$0.12</td>
-        </tr>
-
-        <tr>
-            <td><img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" class="icon"> Mini Dex Coin</td>
-            <td>MDX</td>
-            <td>$0.003</td>
-        </tr>
-
-        <tr>
-            <td><img src="https://cryptologos.cc/logos/polygon-matic-logo.png" class="icon"> Gas Token</td>
-            <td>TARC</td>
-            <td>$0.01</td>
-        </tr>
-    </table>
-
-    <!-- BOX SWAP -->
-    <div class="swapBox">
-        <h2 style="color:#4CAF50;">Swap</h2>
-
-        <input class="swapInput" type="number" placeholder="Quantidade">
-        <input class="swapInput" type="text" placeholder="Token (ex: ARC → MDX)">
-
-        <button class="btn" onclick="swapFake()">Realizar Swap</button>
+        <table>
+            <tr>
+                <th>Token</th>
+                <th>Símbolo</th>
+                <th>Preço</th>
+            </tr>
+            <tr>
+                <td><img src="https://cryptologos.cc/logos/ethereum-eth-logo.png"> Arc Token</td>
+                <td>ARC</td>
+                <td>$0.12</td>
+            </tr>
+            <tr>
+                <td><img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png"> Mini Dex Coin</td>
+                <td>MDX</td>
+                <td>$0.003</td>
+            </tr>
+            <tr>
+                <td><img src="https://cryptologos.cc/logos/tether-usdt-logo.png"> Gas Token</td>
+                <td>TARC</td>
+                <td>$0.01</td>
+            </tr>
+        </table>
     </div>
 
-    <!-- BOTÃO WALLET -->
-    <button class="btn" onclick="connect()">Conectar Wallet</button>
+    <!-- SWAP -->
+    <div class="card swap-box">
+        <h2>Swap</h2>
 
-<script>
-function connect() {
-    alert("Função real de wallet ainda será adicionada. 🔗");
-}
+        <div class="token-box">
+            <span>De:</span>
+            <input class="swap-input" placeholder="0.00">
+            <span>ARC</span>
+        </div>
 
-function swapFake() {
-    alert("Swap fake realizado! 🔄");
-}
-</script>
+        <div class="token-box">
+            <span>Para:</span>
+            <input class="swap-input" placeholder="0.00">
+            <span>MDX</span>
+        </div>
+
+        <button class="btn">Swap (fake)</button>
+    </div>
+
+    <button class="btn" onclick="connect()">Conectar Carteira</button>
+
+    <script>
+        function connect() {
+            alert("Função de conexão ainda não implementada 👀");
+        }
+    </script>
 
 </body>
 </html>
-
