@@ -294,7 +294,17 @@ if(window.ethereum){
   window.ethereum.on && window.ethereum.on('chainChanged', (chainId)=>{
     document.getElementById('networkBadge').textContent = chainId === ARC_TEST.chainIdHex ? 'ARC TESTNET' : 'Rede: ' + chainId;
   });
+}<script>
+function conectarWalletFake() {
+    const carteiraSpan = document.getElementById("carteiraSaldo");
+
+    // simulação de wallet conectada
+    carteiraSpan.innerText = "0xAbC...123 (fake)";
+    
+    alert("Wallet conectada (fake)!");
 }
+</script>
+
 </script>
 </body>
 </html>
